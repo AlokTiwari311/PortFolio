@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer base {
+  ::-moz-selection {
+    background: #d1d1c7;
+  }
+  ::-webkit-selection {
+    background: #d1d1c7;
+  }
+  ::selection {
+    background: #d1d1c7;
+  }
+
+  .text-smooth {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @font-face {
+    font-family: "CabinetGrotesk-Variable";
+    src: url("./assets/fonts/CabinetGrotesk-Variable.ttf") format("truetype");
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GeneralSans-Variable";
+    src: url("./assets/fonts/GeneralSans-Variable.ttf") format("truetype");
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @media (min-width: 640px) {
+    * {
+      cursor: none;
+    }
+  }
+  a,
+  p,
+  span {
+    @apply font-grotesk;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-general tracking-headings;
+  }
+
+  .font-outline-4 {
+    -webkit-text-stroke: 5px black;
+  }
+
+  .font-outline-3 {
+    -webkit-text-stroke: 4px #0e0e0c;
+  }
+}
+
+@layer utilities {
+  .title {
+    clip-path: polygon(0 0, 200% 0, 100% 100%, 0% 100%);
+    line-height: clamp(6rem, 16vw, 10rem);
+  }
+
+  nav a:hover ~ .cursor {
+    transform: scale(5);
+    opacity: 0;
+  }
+
+  .section-heading {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+
+@layer components {
+  /* Preloader container */
+  .preloader {
+    @apply fixed inset-0 z-50 flex items-center justify-center bg-black;
+  }
+
+  /* Preloader text */
+  .preloader-text {
+    @apply text-4xl font-bold tracking-wide text-white md:text-5xl;
+  }
+
+  /* Optional: Animated dots for flair */
+  .preloader-text span {
+    @apply ml-2 inline-block h-3 w-3 rounded-full bg-white;
+  }
+}

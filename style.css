@@ -1,0 +1,10 @@
+/* style.css */
+
+/* Add these at the end or in an appropriate section */
+.opacity-0 {
+  opacity: 0;
+}
+
+.filter.blur-sm {
+  filter: blur(10px);
+}
