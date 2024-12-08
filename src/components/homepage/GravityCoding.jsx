@@ -39,7 +39,7 @@ const App = () => {
         const skillIds = [
             "#animation", "#logo", "#social", "#seo", "#adobe",
             "#reels", "#html", "#digital", "#webflow", "#figma",
-            "#javascript", "#wordpress", "#css"
+            "#javascript", "#wordpress", "#css", "#nodejs", "#ExpressJs", "#MongoDB", "#SQL", "#Github", "NoSQL"
         ];
 
         skillIds.forEach((id, index) => {
@@ -100,6 +100,9 @@ const App = () => {
                     <h2 id="seo">Gsap</h2>
                     <h2 id="digital">NextJs</h2>
                     <h2 id="logo">Framer Motion</h2>
+                    <h2 id="nodejs">NodeJs</h2>
+                    <h2 id="ExpressJs">ExpressJs</h2>
+                    <h2 id="MongoDB">MongoDB</h2>
                 </div>
             </div>
         </div>

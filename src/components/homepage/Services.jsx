@@ -29,7 +29,7 @@ export default function Services() {
 
 
   return (
-    <section id="services" className="h-[40vh] opacity-0 pointer-events-none" aria-label="services">
+    <section className="h-[40vh] opacity-0 pointer-events-none" aria-label="services">
       <Heading title="services" />
       <div className="">
         {/* <ServiceUi
